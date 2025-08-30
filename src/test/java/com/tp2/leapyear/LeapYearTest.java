@@ -10,6 +10,6 @@ class LeapYearTest {
         assertTrue(LeapYear.isleapyear(2000));
         assertTrue(LeapYear.isleapyear(2024));
         assertFalse(LeapYear.isleapyear(1900));
-        assertFalse(LeapYear.isleapyear(2000));
+        assertFalse(LeapYear.isleapyear(2001));
     }
 }
