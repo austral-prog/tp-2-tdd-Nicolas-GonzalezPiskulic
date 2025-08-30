@@ -10,7 +10,11 @@ class PasswordValidatorTest {
     // TODO: Replace these lines with your tests
     @Test
     void exampleTest(){
-        assertEquals(4, 2 + 1);
+        assertFalse(PasswordValidator.isValid("passwor"));
+        assertFalse(PasswordValidator.isValid("password"));
+        assertFalse(PasswordValidator.isValid("Password"));
+        assertFalse(PasswordValidator.isValid("Password1"));
+        assertTrue(PasswordValidator.isValid("Password-1"));
     }
 
 //    Missing tests:
