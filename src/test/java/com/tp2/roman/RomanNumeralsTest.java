@@ -7,24 +7,30 @@ class RomanNumeralsTest {
 
     // TODO: Replace these lines with your tests
     @Test
-    void exampleTest(){
-        assertEquals(4, 2 + 1);
+    void simpletest(){
+        assertEquals("I",RomanNumerals.convert(1));
+        assertEquals("V",RomanNumerals.convert(5));
+        assertEquals("X",RomanNumerals.convert(10));
+        assertEquals("L",RomanNumerals.convert(50));
+        assertEquals("C",RomanNumerals.convert(100));
+        assertEquals("D",RomanNumerals.convert(500));
+        assertEquals("M",RomanNumerals.convert(1000));
     }
 
-//    Missing tests:
-//
-//- Convert 1 to "I"
-//- Convert 5 to "V"
-//- Convert 10 to "X"
-//- Convert 4 to "IV" (subtraction case)
-//- Convert 9 to "IX" (subtraction case)
-//- Convert 40 to "XL"
-//- Convert 50 to "L"
-//- Convert 90 to "XC"
-//- Convert 100 to "C"
-//- Convert 400 to "CD"
-//- Convert 500 to "D"
-//- Convert 900 to "CM"
-//- Convert 1000 to "M"
-//- Convert complex numbers like 1994 to "MCMXCIV"
+    @Test
+    void subtracttest(){
+        assertEquals("IV",RomanNumerals.convert(4));
+        assertEquals("IX",RomanNumerals.convert(9));
+        assertEquals("XL",RomanNumerals.convert(40));
+        assertEquals("XC",RomanNumerals.convert(90));
+        assertEquals("CD",RomanNumerals.convert(400));
+        assertEquals("CM",RomanNumerals.convert(900));
+    }
+
+    @Test
+    void complextest(){
+        assertEquals("MCMXCIV",RomanNumerals.convert(1994));
+        assertEquals("MMXXIII",RomanNumerals.convert(2023));
+    }
+
 }
